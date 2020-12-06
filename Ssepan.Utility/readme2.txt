@@ -11,8 +11,10 @@ Usage notes:
 
 
 Enhancements:
-2.6.1:
+2.7:
 ~Added SettingsComponent to Ssepan.Application. Use for settingsBase and any property in Settings that is an class that implements INotifyPropertyChanged.
+~upgrade project to Framework 4.8
+~change versioning to allow VS determinitic rules (no * wildcard)
 
 2.6:
 ~All libraries are downgraded to .Net 3.5, except Ssepan.Web, which requires 4.0 for MVC feeatures.
