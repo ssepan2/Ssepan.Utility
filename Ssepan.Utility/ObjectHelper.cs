@@ -290,7 +290,7 @@ namespace Ssepan.Utility
         /// <typeparam name="TDestination"></typeparam>
         /// <param name="source"></param>
         /// <param name="destination"></param>
-        /// <param name="eventName"></param>
+        /// <param name="fieldName"></param>
         public static void CopyEvents
         <
             TSource, 
@@ -299,15 +299,15 @@ namespace Ssepan.Utility
         (
             TSource source, 
             TDestination destination,
-            String eventName = "events"
+            String fieldName = "events"
         )
             where TSource : class//, new()
             where TDestination : class//, new()
         {
             try
             {
-                FieldInfo sourceFieldInfo = typeof(TSource).GetField(eventName, BindingFlags.NonPublic | BindingFlags.Instance);
-                FieldInfo destinationFieldInfo = typeof(TDestination).GetField(eventName, BindingFlags.NonPublic | BindingFlags.Instance);
+                FieldInfo sourceFieldInfo = typeof(TSource).GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Instance);
+                FieldInfo destinationFieldInfo = typeof(TDestination).GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Instance);
                 if (sourceFieldInfo != null)
                 {
                     Object eventHandlerList = sourceFieldInfo.GetValue(source);

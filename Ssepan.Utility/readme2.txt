@@ -1,4 +1,5 @@
-Ssepan.* Libraries v2.6.1
+README2.TXT - README for libraries
+Ssepan.* Libraries v2.8
 
 
 Purpose:
@@ -11,10 +12,13 @@ Usage notes:
 
 
 Enhancements:
+2.8
+~Reverted Solution and all projects to Visual Studio 2010 and .Net Framework 4.0. Reason: Compatibility with other old projects (also to be reverted) for retain Setup, WCF and WF features being dropped; usability in VS2010, as VS2019 is too bloated to use.
+
 2.7:
 ~Added SettingsComponent to Ssepan.Application. Use for settingsBase and any property in Settings that is an class that implements INotifyPropertyChanged.
 ~upgrade project to Framework 4.8
-~change versioning to allow VS determinitic rules (no * wildcard)
+~change versioning to allow VS deterministic rules (no * wildcard)
 
 2.6:
 ~All libraries are downgraded to .Net 3.5, except Ssepan.Web, which requires 4.0 for MVC feeatures.
